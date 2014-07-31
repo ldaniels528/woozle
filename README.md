@@ -12,9 +12,7 @@ is currently locked at 320x240.
 
 Currently this demo is composed of four mini-games; including popular games like Breakout, Reversi, and Hangman. 
 
-### Enjoy
+### Build Requirements
 
-
-
-    
-    
+* Java SDK 1.5+
+* Apache Maven 3.0.x
