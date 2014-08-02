@@ -27,4 +27,4 @@ Currently this demo is composed of four mini-games; including popular games like
 
 ### Run the application
 
-	$ java -jar woozle.jar
+	$ java -jar woozle-0.48-jar-with-dependencies.jar

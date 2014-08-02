@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ldaniels528</groupId>
 	<artifactId>woozle</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.48</version>
 	<name>Woozle</name>
-	<description>A collection of mini-games (prototype for a possible smartphone app)</description>
+	<description>A collection of mini-games (prototype for a possible Android application)</description>
 
 	<dependencies>
 		<dependency>
@@ -26,6 +26,30 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>com.ldaniels528.woozle.WooZle</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>assemble-all</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
