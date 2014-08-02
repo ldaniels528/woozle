@@ -167,26 +167,9 @@ public class SoundManager {
 	 */
 	private static AudioSample loadAudioInputStream( final String resourcePath ) 
 	throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-		// first, try to load the resource from the .jar file
-		final URL url = SoundManager.class.getResource( resourcePath );
-		if( url != null ) {
-			final AudioInputStream stream = AudioSystem.getAudioInputStream( url.openStream() );
-			return new AudioSample( stream );
-		} 
-		
-		// if not found, look for the file locally
-		else {
-			final File localFile = new File( String.format( "./resources%s", resourcePath ) );
-			if( localFile.exists() ) {
-				final AudioInputStream stream = AudioSystem.getAudioInputStream( localFile );
-				return new AudioSample( stream );
-			}
-			else {
-				Logger.error( "Audio resource '%s' not found\n", localFile.getAbsolutePath() );
-			}
-		}
-		
-		return null;
+		final URL url = ContentManager.loadResource(resourcePath);
+		final AudioInputStream stream = AudioSystem.getAudioInputStream( url );
+		return new AudioSample( stream );
 	}
 	
 	/**
@@ -199,24 +182,7 @@ public class SoundManager {
 	 */
 	private static AudioData loadAudioData( final String resourcePath ) 
 	throws IOException {
-		// first, try to load the resource from the .jar file
-		final URL url = SoundManager.class.getResource( resourcePath );
-		if( url != null ) {
-			return extractAudioData( url.openStream() );
-		} 
-		
-		// if not found, look for the file locally
-		else {
-			final File localFile = new File( String.format( "./resources%s", resourcePath ) );
-			if( localFile.exists() ) {
-				return extractAudioData( new FileInputStream( localFile ) );
-			}
-			else {
-				Logger.error( "Audio resource '%s' not found\n", localFile.getAbsolutePath() );
-			}
-		}
-		
-		return null;
+		return extractAudioData( ContentManager.loadResourceAsStream(resourcePath) );
 	}
 	
 	/** 
