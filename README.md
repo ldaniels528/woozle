@@ -15,4 +15,16 @@ Currently this demo is composed of four mini-games; including popular games like
 ### Build Requirements
 
 * Java SDK 1.5+
-* Apache Maven 3.0.x
+* Apache Maven 3.0+
+
+### Building the code
+
+    $ mvn clean package
+      
+### Running the tests
+
+    $ mvn test   
+
+### Run the application
+
+	$ java -jar woozle.jar
