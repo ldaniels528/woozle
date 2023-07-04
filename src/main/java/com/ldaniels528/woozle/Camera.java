@@ -2,14 +2,16 @@ package com.ldaniels528.woozle;
 
 import java.awt.*;
 
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
+
 /**
  * WooZle Camera
  * @author lawrence.daniels@gmail.com
  */
 public abstract class Camera {
 	// text status lines
-	protected static final int LINE1 	= 200;
-	protected static final int LINE2 	= 220;
+	protected static final int LINE1 	= BOARD_HEIGHT - 25;
+	protected static final int LINE2 	= BOARD_HEIGHT - 5;
 	
 	// internal fields
 	protected final GameDisplayPane displayPane;

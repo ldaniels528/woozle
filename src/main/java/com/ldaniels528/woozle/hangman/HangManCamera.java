@@ -8,6 +8,7 @@ import com.ldaniels528.woozle.SharedGameData;
 import java.awt.*;
 
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static java.awt.Color.*;
 import static java.awt.Cursor.HAND_CURSOR;
@@ -19,10 +20,11 @@ import static java.lang.String.format;
  * @author lawrence.daniels@gmail.com
  */
 class HangManCamera extends Camera {
-	private static final Font LETTER_FONT 	= new Font( "Courier", Font.BOLD, 25 );
-	private static final int CELL_WIDTH 	= 22;
-	private static final int WORD_LINE 		= 170;
-	private static final int SPACING  		= CELL_WIDTH + 3;
+	private static final int FONT_WIDTH = 32;
+	private static final Font LETTER_FONT 	= new Font( "Courier", Font.PLAIN, FONT_WIDTH );
+	private static final int CELL_WIDTH 	= 40;
+	private static final int WORD_LINE 		= BOARD_HEIGHT / 2 - 2 * CELL_WIDTH;
+	private static final int SPACING  		= CELL_WIDTH + 10;
 	
 	// internal fields
 	private final SharedGameData gameData;
@@ -58,6 +60,8 @@ class HangManCamera extends Camera {
 		final int score = gameData.getScore();
 		
 		// draw the background
+		offScreen.setColor(Color.BLACK);
+		offScreen.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
 		offScreen.drawImage( gameData.getStageImage(), 0, 0, displayPane );
 		
 		// draw the remaining letters
@@ -151,9 +155,9 @@ class HangManCamera extends Camera {
 		offScreen.setFont( LETTER_FONT );
 		
 		// Letters: A through L
-		for( int n = 0; n < 13; n++ ) {
+		for( int n = 0; n < 26; n++ ) {
 			// compute the X-axis position
-			final int x = 25 * n + 3;
+			final int x = FONT_WIDTH * n + 3;
 			
 			// display the letter in Row #1: A through L
 			final Character letterA = availableLetters[n];
@@ -162,15 +166,6 @@ class HangManCamera extends Camera {
 				offScreen.fillRect( x, LINE1 - 16, 16, 17 );
 				offScreen.setColor( LIGHT_GRAY );
 				offScreen.drawString( String.valueOf( letterA ), x, LINE1 );
-			}
-			
-			// display the letter in Row #2: M through Z
-			final Character letterB = availableLetters[n+13];
-			if( letterB != null ) {
-				offScreen.setColor( BLUE );
-				offScreen.fillRect( x, LINE2 - 16, 16, 17 );
-				offScreen.setColor( LIGHT_GRAY );
-				offScreen.drawString( String.valueOf( letterB ), x, LINE2 );
 			}
 		}
 	}

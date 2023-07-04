@@ -5,11 +5,12 @@ import com.ldaniels528.woozle.SharedGameData;
 
 import java.awt.*;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import static com.ldaniels528.woozle.CustomColors.LIGHT_GREEN;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static com.ldaniels528.woozle.GameState.GAME_OVER;
 import static com.ldaniels528.woozle.GameState.OUT_OF_BOUNDS;
 import static java.awt.Color.*;
@@ -52,8 +53,8 @@ class BreakOutPlayingField {
 		this.addQueue		= new HashSet<Entity>( MAX_ENTITIES );
 		this.removeQueue	= new HashSet<Entity>( MAX_ENTITIES );
 		this.gameData		= SharedGameData.getInstance();
-		this.paddle 		= new Paddle( 160, 205 );
-		this.ball			= new Ball( this, 160, 185 );
+		this.paddle 		= new Paddle( BOARD_WIDTH / 2.0, BOARD_HEIGHT - 20, 100, 15 );
+		this.ball			= new Ball( this, BOARD_WIDTH / 2.0, BOARD_HEIGHT - 40, 20 );
 		this.spareBalls		= 3;
 		this.dirtyCache		= true;
 	}
@@ -65,17 +66,6 @@ class BreakOutPlayingField {
 	public void add( final Entity entity ) {
 		synchronized( addQueue ) {
 			addQueue.add( entity );
-			this.dirtyCache = true;
-		}
-	}
-	
-	/**
-	 * Adds the given collection of entities
-	 * @param entities the given {@link Collection collection} of {@link Entity entities}
-	 */
-	public void addAll( final Collection<Entity> entities ) {
-		synchronized( addQueue ) {
-			addQueue.addAll( entities );
 			this.dirtyCache = true;
 		}
 	}
@@ -134,9 +124,12 @@ class BreakOutPlayingField {
 		// create the blocks
 		Block[] blocks = null;
 		switch( level ) {
-			case 1: 	blocks = setupBlocks( 13, 4, 25, 20 ); break;
-			case 2: 	blocks = setupBlocks( 13, 6, 25, 15 ); break;
-			default: 	blocks = setupBlocks( 13, 8, 25, 10 ); 
+			case 1:
+				int blockWith = 50;
+				int blockHeight = 25;
+				blocks = setupBlocks( BOARD_WIDTH / blockWith, 10, blockWith, blockHeight ); break;
+			case 2: 	blocks = setupBlocks( BOARD_WIDTH / 25, 6, 25, 15 ); break;
+			default: 	blocks = setupBlocks( BOARD_WIDTH / 25, 8, 25, 10 );
 		}
 		
 		// reset the entities

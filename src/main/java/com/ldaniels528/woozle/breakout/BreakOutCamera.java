@@ -4,7 +4,11 @@ import com.ldaniels528.woozle.Camera;
 import com.ldaniels528.woozle.GameDisplayPane;
 import com.ldaniels528.woozle.SharedGameData;
 
+import java.awt.*;
+
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static java.awt.Color.WHITE;
 import static java.awt.Cursor.CROSSHAIR_CURSOR;
 import static java.awt.Cursor.getPredefinedCursor;
@@ -42,7 +46,7 @@ class BreakOutCamera extends Camera {
 	/**
 	 * Renders the complete scene
 	 * @param gameManager the given {@link BreakOutGameManager game manager}
-	 * @param board the given {@link BreakOutPlayingField playing field}
+	 * @param playingField the given {@link BreakOutPlayingField playing field}
 	 */
 	public void renderScene( final BreakOutGameManager gameManager, final BreakOutPlayingField playingField ) {
 		// get the level and score
@@ -51,6 +55,8 @@ class BreakOutCamera extends Camera {
 		final int balls	= playingField.getSpareBalls();
 		
 		// draw the background
+		offScreen.setColor(Color.BLACK);
+		offScreen.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
 		offScreen.drawImage( gameData.getStageImage(), 0, 0, displayPane );
 		
 		// draw the score

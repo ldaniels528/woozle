@@ -10,8 +10,8 @@ import java.awt.*;
 @SuppressWarnings("serial")
 public class GameDisplayPane extends JPanel {
 	// constants
-	public static final int BOARD_WIDTH 	= 325; //325
-	public static final int BOARD_HEIGHT 	= 225; //225
+	public static final int BOARD_WIDTH 	= 1024;
+	public static final int BOARD_HEIGHT 	= 768;
 	
 	// internal fields
 	private Graphics2D offScreen;
@@ -33,8 +33,8 @@ public class GameDisplayPane extends JPanel {
 	 */
 	public void init() {
 		// get the width and height of the pane
-		this.width		= super.getWidth();
-		this.height		= super.getHeight();
+		this.width		= BOARD_WIDTH; // super.getWidth();
+		this.height		= BOARD_HEIGHT; // super.getHeight();
 		
 		// create the off-screen image buffer
 		this.buffer		= super.createImage( width, height );

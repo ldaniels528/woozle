@@ -3,7 +3,6 @@ package com.ldaniels528.woozle.othello;
 import com.ldaniels528.woozle.Camera;
 import com.ldaniels528.woozle.GameDisplayPane;
 import com.ldaniels528.woozle.SharedGameData;
-import com.ldaniels528.woozle.hangman.HangManGameManager;
 import com.ldaniels528.woozle.othello.OthelloBoard.GridStatistics;
 
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
@@ -21,8 +20,8 @@ import static java.lang.String.format;
  * @author lawrence.daniels@gmail.com
  */
 class OthelloCamera extends Camera {
-	public  static final int CELL_WIDTH 	= 28;
-	public  static final int CELL_HEIGHT 	= 28;
+	public  static final int CELL_WIDTH 	= 56;
+	public  static final int CELL_HEIGHT 	= 56;
 	public  static final int X_OFFSET		= ( BOARD_WIDTH - BOARD_HEIGHT ) / 2;
 	public  static final int Y_OFFSET		= 0;
 	private static final int PIECE_WIDTH 	= CELL_WIDTH - 6;
@@ -55,8 +54,8 @@ class OthelloCamera extends Camera {
 
 	/**
 	 * Renders the complete scene
-	 * @param gameManager the given {@link HangManGameManager game manager}
-	 * @param board the given {@link HangManBoard game board}
+	 * @param gameManager the given {@link OthelloGameManager game manager}
+	 * @param board the given {@link OthelloBoard game board}
 	 */
 	public void renderScene( final OthelloGameManager gameManager, final OthelloBoard board ) {
 		// draw the background
@@ -174,25 +173,31 @@ class OthelloCamera extends Camera {
 	
 	/**
 	 * Renders the game information onto the graphics context
-	 * @param level the current game level (stage)
-	 * @param score the current player's score
+	 * @param statistics the {{@link GridStatistics}}
 	 */
 	private void renderGameInfo( final GridStatistics statistics ) {
 		// get the counts
 		final int playerCount	= statistics.getPlayerCount();
 		final int computerCount = statistics.getComputerCount();
+		final boolean isWinning = playerCount >= computerCount;
 		
 		// draw the score 
 		offScreen.setColor( WHITE );
 		offScreen.setFont( INFO2_FONT );
 		
 		// draw the player's score
-		renderYing( 0, 40 );
-		offScreen.drawString( format( "%02d", playerCount ), 0, 80 );
+		renderYing( 10, 40 );
+		if(playerCount > computerCount) offScreen.setColor( GREEN );
+		else if(playerCount == computerCount) offScreen.setColor( YELLOW );
+		else offScreen.setColor( RED );
+		offScreen.drawString( format( "%02d", playerCount ), 20, 110 );
 		
 		// draw the computer's score
-		renderYang( 300, 40 );
-		offScreen.drawString( format( "%02d", computerCount ), 300, 80 );
+		renderYang( 10, 300 );
+		if(computerCount > playerCount) offScreen.setColor( GREEN );
+		else if(computerCount == playerCount) offScreen.setColor( YELLOW );
+		else offScreen.setColor( RED );
+		offScreen.drawString( format( "%02d", computerCount ), 20, 370 );
 	}
 	
 }

@@ -30,7 +30,7 @@ class HangManBoard {
 		this.hangingMan			= new HangingMan();
 		this.dictionary 		= new HangmanDictionary();
 		this.availableLetters	= new Character[ 26 ];
-		this.clickArea			= new Rectangle( 0, 185, 320, 55 );
+		this.clickArea			= new Rectangle( 0, 185, 640, 110 );
 	}
 	
 	/**
@@ -49,8 +49,7 @@ class HangManBoard {
 	
 	/** 
 	 * Handles a mouse click
-	 * @param mx the given mouse x-coordinate
-	 * @param my the given mouse y-coordinate
+	 * @param point the given mouse {@link Point x-coordinate and y-coordinates}
 	 */
 	public void handleElementClicked( final Point point ) {
 		Logger.info( "Mouse clicked at (%.1f,%.1f)\n", point.getX(), point.getY() );
@@ -74,8 +73,8 @@ class HangManBoard {
 	 */
 	public void pickLetter( final char letter ) {
 		int count = 0;
-		int index = 0;
 		int last  = 0;
+		int index;
 		
 		// get the available letter index
 		final int avIndex = ( letter - 'A' );

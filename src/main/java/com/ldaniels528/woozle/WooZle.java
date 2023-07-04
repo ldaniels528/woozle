@@ -44,7 +44,7 @@ implements KeyListener, MouseListener, MouseMotionListener, WindowListener {
 	}
 	
 	/**
-	 * For stand alone operation
+	 * For stand-alone operation
 	 * @param args the given command line arguments
 	 */
 	public static void main( final String[] args ) {
@@ -99,7 +99,6 @@ implements KeyListener, MouseListener, MouseMotionListener, WindowListener {
 	
 	/**
 	 * Initializes the game
-	 * @throws IOException 
 	 */
 	private void init() {
 		// initialize the content pane
@@ -355,7 +354,6 @@ implements KeyListener, MouseListener, MouseMotionListener, WindowListener {
 		
 		/**
 		 * Creates a new game chooser instance
-		 * @param woozle the given {@link WooZle game client}
 		 * @param displayPane the given {@link GameDisplayPane display pane}
 		 */
 		public GameChooser( final GameDisplayPane displayPane ) {

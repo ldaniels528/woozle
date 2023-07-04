@@ -17,7 +17,7 @@ class Ball extends Entity {
 	private static final double INITIAL_SPEED 	=  4;
 	private static final double MAXIMUM_SPEED 	= 12;
 	private static final double SPEED_INCREMENT	=  0.075;
-	private static final int SIZE = 10;
+	private int size;
 	private final BreakOutPlayingField playingField;
 	private Direction direction;
 	private double initialX;
@@ -32,13 +32,15 @@ class Ball extends Entity {
 	 */
 	public Ball( final BreakOutPlayingField playingField, 
 				 final double x, 
-				 final double y ) {
-		super( x, y, SIZE, SIZE );
+				 final double y,
+				 final int size ) {
+		super( x, y, size, size);
 		this.initialX		= x;
 		this.initialY		= y;
 		this.playingField	= playingField;
 		this.direction 		= getRandomDirection( NE, NW );
 		this.speed			= INITIAL_SPEED;
+		this.size			= size;
 	}
 	
 	/* 
@@ -78,7 +80,7 @@ class Ball extends Entity {
 		
 		// draw the ball
 		g.setColor( WHITE );
-		g.fillOval( cx, cy, SIZE, SIZE );
+		g.fillOval( cx, cy, size, size);
 	}
 	
 	/* 

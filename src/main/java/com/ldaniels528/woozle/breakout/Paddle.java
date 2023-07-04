@@ -13,16 +13,14 @@ import static java.awt.Color.WHITE;
  * @author lawrence.daniels@gmail.com
  */
 class Paddle extends Entity {
-	private static final int WIDTH 	= 50;
-	private static final int HEIGHT	= 10;
 
 	/**
 	 * Creates a new paddle instance
 	 * @param x the given x-axis coordinate 
 	 * @param y the given y-axis coordinate
 	 */
-	public Paddle( final double x, final double y ) {
-		super( x, y, WIDTH, HEIGHT );
+	public Paddle( final double x, final double y, double width, double height ) {
+		super( x, y, width, height );
 	}
 	
 	/* 
@@ -39,12 +37,12 @@ class Paddle extends Entity {
 	 */
 	public void render( final Graphics2D g ) {
 		// compute the center
-		final int cx = (int)x - WIDTH/2;
+		final int cx = (int)x - (int)width/2;
 		final int cy = (int)y;
 		
 		// render the paddle
 		g.setColor( WHITE );
-		g.fillRect( cx, cy, WIDTH, HEIGHT );
+		g.fillRect( cx, cy, (int)width, (int)height );
 	}
 	
 	/* 
