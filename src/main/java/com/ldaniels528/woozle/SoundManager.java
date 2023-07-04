@@ -1,29 +1,11 @@
 package com.ldaniels528.woozle;
 
+import javax.sound.sampled.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
-import javax.sound.sampled.UnsupportedAudioFileException;
-
-import sun.audio.AudioData;
-import sun.audio.AudioPlayer;
-import sun.audio.ContinuousAudioDataStream;
+import java.util.*;
 
 /**
  * WooZle Sound Manager (Java Sound API Version)
@@ -36,7 +18,6 @@ public class SoundManager {
 	// internals fields
 	private final Collection<SoundEffectsThread> threads;
 	private final Map<Object,AudioSample> samples;
-	private final Map<Object,AudioData> samplesAU;
 	private final LinkedList<Object> queue;
 
 	/**
@@ -45,7 +26,6 @@ public class SoundManager {
 	private SoundManager() {
 		this.queue		= new LinkedList<Object>();
 		this.samples	= new HashMap<Object, AudioSample>( 25 );
-		this.samplesAU	= new HashMap<Object, AudioData>( 25 );
 		this.threads 	= createSoundEffectThreads( 4 );
 	}
 	
@@ -85,17 +65,17 @@ public class SoundManager {
 	 * @param soundKey the given sound key
 	 */
 	public void playBackroundMusic( final Object soundKey ) {
-		// attempt to get the audio data
-		AudioData audioData = null;
-		synchronized( samplesAU ) {
-			audioData = samplesAU.get( soundKey );
-		}
-		
-		// if the audio data was found ...
-		if( audioData != null ) {
-			final ContinuousAudioDataStream cas = new ContinuousAudioDataStream( audioData );
-		    AudioPlayer.player.start( cas );
-		}
+//		// attempt to get the audio data
+//		AudioData audioData = null;
+//		synchronized( samplesAU ) {
+//			audioData = samplesAU.get( soundKey );
+//		}
+//
+//		// if the audio data was found ...
+//		if( audioData != null ) {
+//			final ContinuousAudioDataStream cas = new ContinuousAudioDataStream( audioData );
+//		    AudioPlayer.player.start( cas );
+//		}
 	}
 
 	/**
@@ -143,46 +123,27 @@ public class SoundManager {
 	 * @param clipName the name of the audio sample
 	 */
 	public void loadAudioSampleAU( final String resourcePath, final Object clipName ) {
-		try {
-				final AudioData audioData = loadAudioData( resourcePath );
-				if( audioData != null ) {
-					samplesAU.put( clipName, audioData );
-					Logger.info( "Loaded audio sample '%s' as '%s'\n", resourcePath, clipName );
-				}
-		}
-		catch( IOException e ) {
-			e.printStackTrace();
-		}
+//		try {
+//				final AudioData audioData = loadAudioData( resourcePath );
+//				if( audioData != null ) {
+//					samplesAU.put( clipName, audioData );
+//					Logger.info( "Loaded audio sample '%s' as '%s'\n", resourcePath, clipName );
+//				}
+//		}
+//		catch( IOException e ) {
+//			e.printStackTrace();
+//		}
 	}
 
 	/**
 	 * Retrieves a set of images which match the given pattern
-	 * @param audioMap the mapping of image name to image object
-	 * @param resourcePattern the resource naming pattern (e.g. 'avatars/UGO/avatar')
-	 * @param namingPattern the pattern to use in naming loaded images
 	 * @return the list loaded images
-	 * @throws IOException 
-	 * @throws UnsupportedAudioFileException 
-	 * @throws LineUnavailableException 
 	 */
 	private static AudioSample loadAudioInputStream( final String resourcePath ) 
 	throws IOException, UnsupportedAudioFileException, LineUnavailableException {
 		final URL url = ContentManager.loadResource(resourcePath);
 		final AudioInputStream stream = AudioSystem.getAudioInputStream( url );
 		return new AudioSample( stream );
-	}
-	
-	/**
-	 * Retrieves a set of images which match the given pattern
-	 * @param audioMap the mapping of image name to image object
-	 * @param resourcePattern the resource naming pattern (e.g. 'avatars/UGO/avatar')
-	 * @param namingPattern the pattern to use in naming loaded images
-	 * @return the list loaded images
-	 * @throws IOException 
-	 */
-	private static AudioData loadAudioData( final String resourcePath ) 
-	throws IOException {
-		return extractAudioData( ContentManager.loadResourceAsStream(resourcePath) );
 	}
 	
 	/** 
@@ -196,36 +157,6 @@ public class SoundManager {
 			threads.add( new SoundEffectsThread() );
 		}
 		return threads;
-	}
-
-	/** 
-	 * Extracts the audio data from the given input stream
-	 * @param in the given audio {@link InputStream input stream}
-	 * @return the {@link AudioData audio data}
-	 * @throws IOException
-	 */
-	private static AudioData extractAudioData( final InputStream in ) 
-	throws IOException {
-		try {
-			// create a byte stream
-			final ByteArrayOutputStream out = 
-				new ByteArrayOutputStream( 65535 );
-			
-			// write the contents of the input stream to the buffer
-			final byte[] buffer = new byte[1024];
-			
-			// read .AU or .WAV data
-			int count;
-			while( ( count = in.read( buffer ) ) != -1 ) {
-				out.write( buffer, 0, count );
-			}
-
-			// convert to audio data
-			return new AudioData( out.toByteArray() );
-		}
-		finally {
-			try { in.close(); } catch( IOException e ) { }
-		}
 	}
 	
 	/** 
