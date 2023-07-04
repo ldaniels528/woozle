@@ -1,10 +1,10 @@
 package com.ldaniels528.woozle.scramble;
 
-import static java.lang.String.format;
+import com.ldaniels528.woozle.Randomizer;
 
 import java.util.Random;
 
-import com.ldaniels528.woozle.Randomizer;
+import static java.lang.String.format;
 
 /**
  * Letter Element Factory

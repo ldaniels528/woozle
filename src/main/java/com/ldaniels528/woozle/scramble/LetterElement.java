@@ -1,6 +1,6 @@
 package com.ldaniels528.woozle.scramble;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;

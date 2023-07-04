@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle.othello;
 
-import static java.awt.Color.RED;
-import static java.awt.Color.YELLOW;
-
-import java.awt.event.MouseEvent;
-
 import com.ldaniels528.woozle.GameDisplayPane;
 import com.ldaniels528.woozle.GameManager;
 import com.ldaniels528.woozle.GameState;
 import com.ldaniels528.woozle.InGameMessage;
+
+import java.awt.event.MouseEvent;
+
+import static java.awt.Color.RED;
+import static java.awt.Color.YELLOW;
 
 /**
  * Othello Game Manager

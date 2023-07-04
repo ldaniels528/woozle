@@ -1,6 +1,6 @@
 package com.ldaniels528.woozle;
 
-import java.awt.Graphics2D;
+import java.awt.*;
 
 /**
  * WooZle Camera

@@ -1,10 +1,7 @@
 package com.ldaniels528.woozle;
 
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Image;
-
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * WooZle Game Display Panel

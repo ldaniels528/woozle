@@ -1,8 +1,11 @@
 package com.ldaniels528.woozle;
 
-import static com.ldaniels528.woozle.CustomColors.APP_FONT;
-import static com.ldaniels528.woozle.CustomColors.CHOOSE_FONT;
-import static com.ldaniels528.woozle.CustomColors.DARK_BLUE;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.IOException;
+
+import static com.ldaniels528.woozle.CustomColors.*;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static java.awt.Color.CYAN;
@@ -10,22 +13,6 @@ import static java.awt.Color.WHITE;
 import static java.lang.String.format;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
-
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.io.IOException;
-
-import javax.swing.JFrame;
 
 /**
  * WooZle: Retro Mini-Game Collection

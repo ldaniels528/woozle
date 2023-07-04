@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle.invasion;
 
-import static com.ldaniels528.woozle.GameDisplayPane.*;
+import com.ldaniels528.woozle.GameState;
+import com.ldaniels528.woozle.SharedGameData;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.SharedGameData;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 
 /** 
  * Invasion Virtual World

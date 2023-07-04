@@ -1,17 +1,17 @@
 package com.ldaniels528.woozle.invasion;
 
+import com.ldaniels528.woozle.Camera;
+import com.ldaniels528.woozle.ContentManager;
+import com.ldaniels528.woozle.GameDisplayPane;
+import com.ldaniels528.woozle.SharedGameData;
+
+import java.awt.*;
+
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
 import static java.awt.Color.WHITE;
 import static java.awt.Cursor.CROSSHAIR_CURSOR;
 import static java.awt.Cursor.getPredefinedCursor;
 import static java.lang.String.format;
-
-import java.awt.Image;
-
-import com.ldaniels528.woozle.Camera;
-import com.ldaniels528.woozle.ContentManager;
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.SharedGameData;
 
 /** 
  * Invasion Camera

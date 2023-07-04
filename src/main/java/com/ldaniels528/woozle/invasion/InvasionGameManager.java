@@ -1,15 +1,11 @@
 package com.ldaniels528.woozle.invasion;
 
-import static java.awt.Color.RED;
-import static java.awt.Color.WHITE;
+import com.ldaniels528.woozle.*;
 
 import java.awt.event.MouseEvent;
 
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.GameManager;
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.InGameMessage;
-import com.ldaniels528.woozle.SharedGameData;
+import static java.awt.Color.RED;
+import static java.awt.Color.WHITE;
 
 /**
  * Invasion Game Manager

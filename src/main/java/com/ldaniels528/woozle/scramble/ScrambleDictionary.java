@@ -1,14 +1,10 @@
 package com.ldaniels528.woozle.scramble;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.Collections;
-
 import com.ldaniels528.woozle.GameDictionary;
 import com.ldaniels528.woozle.Logger;
+
+import java.io.*;
+import java.util.Collections;
 
 /**
  * WooZle: Scramble Dictionary 

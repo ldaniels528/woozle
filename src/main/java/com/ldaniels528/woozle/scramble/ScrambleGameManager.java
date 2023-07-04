@@ -1,19 +1,14 @@
 package com.ldaniels528.woozle.scramble;
 
-import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.*;
-import static java.awt.Color.RED;
-import static java.awt.Color.WHITE;
+import com.ldaniels528.woozle.*;
 
-import java.awt.Point;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.GameManager;
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.InGameMessage;
-import com.ldaniels528.woozle.Logger;
-import com.ldaniels528.woozle.StopWatch;
+import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.*;
+import static java.awt.Color.RED;
+import static java.awt.Color.WHITE;
 
 /**
  * WooZle: Scramble Game Manager

@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle.breakout;
 
-import static com.ldaniels528.woozle.CustomColors.*;
+import com.ldaniels528.woozle.Camera;
+import com.ldaniels528.woozle.GameDisplayPane;
+import com.ldaniels528.woozle.SharedGameData;
+
+import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
 import static java.awt.Color.WHITE;
 import static java.awt.Cursor.CROSSHAIR_CURSOR;
 import static java.awt.Cursor.getPredefinedCursor;
 import static java.lang.String.format;
-
-import com.ldaniels528.woozle.Camera;
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.SharedGameData;
 
 /**
  * Break-Out Camera

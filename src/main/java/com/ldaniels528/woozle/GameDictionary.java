@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle;
 
-import static com.ldaniels528.woozle.ContentManager.loadResourceAsStream;
-import static java.lang.String.format;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.ldaniels528.woozle.ContentManager.loadResourceAsStream;
+import static java.lang.String.format;
 
 /**
  * WooZle Dictionary 

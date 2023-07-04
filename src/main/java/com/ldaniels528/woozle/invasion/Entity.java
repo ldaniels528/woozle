@@ -1,6 +1,6 @@
 package com.ldaniels528.woozle.invasion;
 
-import java.awt.Graphics2D;
+import java.awt.*;
 
 /**
  * This class is the base class for all entities

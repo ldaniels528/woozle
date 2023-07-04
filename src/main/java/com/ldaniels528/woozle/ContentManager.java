@@ -1,13 +1,12 @@
 package com.ldaniels528.woozle;
 
-import static java.lang.String.format;
-
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-import javax.swing.ImageIcon;
+import static java.lang.String.format;
 
 /**
  * WooZle Content Manager

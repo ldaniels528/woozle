@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle.othello;
 
-import static com.ldaniels528.woozle.othello.OthelloBoard.COLUMNS;
-import static com.ldaniels528.woozle.othello.OthelloBoard.ROWS;
+import com.ldaniels528.woozle.Logger;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-import com.ldaniels528.woozle.Logger;
+import static com.ldaniels528.woozle.othello.OthelloBoard.COLUMNS;
+import static com.ldaniels528.woozle.othello.OthelloBoard.ROWS;
 
 /**
  * Othello Artificial Intelligence Processor

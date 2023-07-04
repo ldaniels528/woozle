@@ -1,22 +1,20 @@
 package com.ldaniels528.woozle.scramble;
 
-import static com.ldaniels528.woozle.scramble.LetterElementFactory.getLetter;
-import static com.ldaniels528.woozle.scramble.LetterElementFactory.getVowel;
-import static com.ldaniels528.woozle.scramble.ScrambleCamera.CELL_HEIGHT;
-import static com.ldaniels528.woozle.scramble.ScrambleCamera.CELL_WIDTH;
-import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.DANGER;
-import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.SWAP_LETTERS;
-import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.WORD_FOUND;
-import static java.awt.Color.RED;
+import com.ldaniels528.woozle.InGameMessage;
+import com.ldaniels528.woozle.Logger;
+import com.ldaniels528.woozle.SharedGameData;
 
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.ldaniels528.woozle.InGameMessage;
-import com.ldaniels528.woozle.Logger;
-import com.ldaniels528.woozle.SharedGameData;
+import static com.ldaniels528.woozle.scramble.LetterElementFactory.getLetter;
+import static com.ldaniels528.woozle.scramble.LetterElementFactory.getVowel;
+import static com.ldaniels528.woozle.scramble.ScrambleCamera.CELL_HEIGHT;
+import static com.ldaniels528.woozle.scramble.ScrambleCamera.CELL_WIDTH;
+import static com.ldaniels528.woozle.scramble.ScrambleSoundKeys.*;
+import static java.awt.Color.RED;
 
 /**
  * This class represents the virtual game board for Scramble

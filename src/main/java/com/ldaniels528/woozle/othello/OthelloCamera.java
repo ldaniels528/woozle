@@ -1,6 +1,11 @@
 package com.ldaniels528.woozle.othello;
 
-import static java.lang.String.format;
+import com.ldaniels528.woozle.Camera;
+import com.ldaniels528.woozle.GameDisplayPane;
+import com.ldaniels528.woozle.SharedGameData;
+import com.ldaniels528.woozle.hangman.HangManGameManager;
+import com.ldaniels528.woozle.othello.OthelloBoard.GridStatistics;
+
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
@@ -9,12 +14,7 @@ import static com.ldaniels528.woozle.othello.OthelloBoard.ROWS;
 import static java.awt.Color.*;
 import static java.awt.Cursor.HAND_CURSOR;
 import static java.awt.Cursor.getPredefinedCursor;
-
-import com.ldaniels528.woozle.Camera;
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.SharedGameData;
-import com.ldaniels528.woozle.hangman.HangManGameManager;
-import com.ldaniels528.woozle.othello.OthelloBoard.GridStatistics;
+import static java.lang.String.format;
 
 /**
  * Othello Camera

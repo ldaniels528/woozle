@@ -1,25 +1,19 @@
 package com.ldaniels528.woozle.scramble;
 
-import static com.ldaniels528.woozle.CustomColors.*;
-import static com.ldaniels528.woozle.scramble.ScrambleBoard.COLS;
-import static com.ldaniels528.woozle.scramble.ScrambleBoard.ROWS;
-import static java.awt.Color.BLUE;
-import static java.awt.Color.GREEN;
-import static java.awt.Color.LIGHT_GRAY;
-import static java.awt.Color.ORANGE;
-import static java.awt.Color.RED;
-import static java.awt.Color.WHITE;
-import static java.awt.Color.YELLOW;
-import static java.awt.Cursor.HAND_CURSOR;
-import static java.awt.Cursor.getPredefinedCursor;
-import static java.lang.String.format;
-
-import java.awt.Color;
-
 import com.ldaniels528.woozle.Camera;
 import com.ldaniels528.woozle.GameDisplayPane;
 import com.ldaniels528.woozle.SharedGameData;
 import com.ldaniels528.woozle.StopWatch;
+
+import java.awt.*;
+
+import static com.ldaniels528.woozle.CustomColors.*;
+import static com.ldaniels528.woozle.scramble.ScrambleBoard.COLS;
+import static com.ldaniels528.woozle.scramble.ScrambleBoard.ROWS;
+import static java.awt.Color.*;
+import static java.awt.Cursor.HAND_CURSOR;
+import static java.awt.Cursor.getPredefinedCursor;
+import static java.lang.String.format;
 
 /**
  * Scramble Camera

@@ -1,13 +1,10 @@
 package com.ldaniels528.woozle.invasion;
 
-import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
-import static java.awt.Color.WHITE;
-
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Polygon;
-
 import com.ldaniels528.woozle.ContentManager;
+
+import java.awt.*;
+
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 
 /**
  * Represents a space ship

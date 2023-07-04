@@ -1,16 +1,13 @@
 package com.ldaniels528.woozle.breakout;
 
+import com.ldaniels528.woozle.Randomizer;
+
+import java.awt.*;
+
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
-import static com.ldaniels528.woozle.breakout.Direction.NE;
-import static com.ldaniels528.woozle.breakout.Direction.NW;
-import static com.ldaniels528.woozle.breakout.Direction.SE;
-import static com.ldaniels528.woozle.breakout.Direction.SW;
+import static com.ldaniels528.woozle.breakout.Direction.*;
 import static java.awt.Color.WHITE;
-
-import java.awt.Graphics2D;
-
-import com.ldaniels528.woozle.Randomizer;
 
 /**
  * Break-Out Ball

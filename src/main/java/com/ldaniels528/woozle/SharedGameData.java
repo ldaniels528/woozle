@@ -1,9 +1,9 @@
 package com.ldaniels528.woozle;
 
+import java.awt.*;
+
 import static com.ldaniels528.woozle.GameManager.STAGES;
 import static java.lang.String.format;
-
-import java.awt.Image;
 
 /**
  * Represents the common data that is shared between all mini-games.

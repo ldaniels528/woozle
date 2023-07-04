@@ -1,11 +1,8 @@
 package com.ldaniels528.woozle.hangman;
 
-import static java.awt.Color.WHITE;
+import java.awt.*;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Stroke;
+import static java.awt.Color.WHITE;
 
 /**
  * Represents the hanging man

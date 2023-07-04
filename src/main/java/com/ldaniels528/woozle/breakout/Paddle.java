@@ -1,12 +1,12 @@
 package com.ldaniels528.woozle.breakout;
 
+import com.ldaniels528.woozle.SoundManager;
+
+import java.awt.*;
+
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static com.ldaniels528.woozle.breakout.BreakOutSoundKeys.BOUNCE;
-import static java.awt.Color.*;
-
-import java.awt.Graphics2D;
-
-import com.ldaniels528.woozle.SoundManager;
+import static java.awt.Color.WHITE;
 
 /**
  * Break-Out Paddle

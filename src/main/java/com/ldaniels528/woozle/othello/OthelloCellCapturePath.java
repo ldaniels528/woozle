@@ -1,10 +1,11 @@
 package com.ldaniels528.woozle.othello;
 
-import static com.ldaniels528.woozle.othello.OthelloBoard.*;
+import com.ldaniels528.woozle.Logger;
+
+import static com.ldaniels528.woozle.othello.OthelloBoard.COLUMNS;
+import static com.ldaniels528.woozle.othello.OthelloBoard.ROWS;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
-
-import com.ldaniels528.woozle.Logger;
 
 /**
  * Represents a Cell Capture Path

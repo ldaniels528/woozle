@@ -1,13 +1,11 @@
 package com.ldaniels528.woozle;
 
-import static com.ldaniels528.woozle.GameDisplayPane.*;
+import java.awt.*;
+
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_HEIGHT;
+import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static java.awt.Color.YELLOW;
 import static java.awt.Font.BOLD;
-
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics2D;
 
 /**
  * Represents an In Game Message

@@ -1,18 +1,18 @@
 package com.ldaniels528.woozle.hangman;
 
+import com.ldaniels528.woozle.Camera;
+import com.ldaniels528.woozle.GameDisplayPane;
+import com.ldaniels528.woozle.GameState;
+import com.ldaniels528.woozle.SharedGameData;
+
+import java.awt.*;
+
 import static com.ldaniels528.woozle.CustomColors.INFO2_FONT;
 import static com.ldaniels528.woozle.GameDisplayPane.BOARD_WIDTH;
 import static java.awt.Color.*;
 import static java.awt.Cursor.HAND_CURSOR;
 import static java.awt.Cursor.getPredefinedCursor;
 import static java.lang.String.format;
-
-import java.awt.Font;
-
-import com.ldaniels528.woozle.Camera;
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.SharedGameData;
 	
 /**
  * HangMan High Camera

@@ -1,9 +1,8 @@
 package com.ldaniels528.woozle.breakout;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-
 import com.ldaniels528.woozle.SoundManager;
+
+import java.awt.*;
 
 /**
  * Represents a non-interactive block

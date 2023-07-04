@@ -1,14 +1,14 @@
 package com.ldaniels528.woozle.hangman;
 
+import com.ldaniels528.woozle.GameDictionary;
+import com.ldaniels528.woozle.Randomizer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-
-import com.ldaniels528.woozle.GameDictionary;
-import com.ldaniels528.woozle.Randomizer;
 
 /**
  * WooZle: Hangman Dictionary 

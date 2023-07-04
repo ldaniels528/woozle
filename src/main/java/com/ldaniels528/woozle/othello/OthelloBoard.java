@@ -1,16 +1,13 @@
 package com.ldaniels528.woozle.othello;
 
-import static com.ldaniels528.woozle.othello.OthelloCamera.CELL_HEIGHT;
-import static com.ldaniels528.woozle.othello.OthelloCamera.CELL_WIDTH;
-import static com.ldaniels528.woozle.othello.OthelloCamera.X_OFFSET;
-import static com.ldaniels528.woozle.othello.OthelloCamera.Y_OFFSET;
+import com.ldaniels528.woozle.GameState;
+import com.ldaniels528.woozle.Logger;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.Logger;
+import static com.ldaniels528.woozle.othello.OthelloCamera.*;
 
 /**
  * This class represents the virtual game board for Othello

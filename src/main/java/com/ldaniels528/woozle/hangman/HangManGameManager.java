@@ -1,20 +1,12 @@
 package com.ldaniels528.woozle.hangman;
 
-import static java.awt.Color.CYAN;
-import static java.awt.Color.GREEN;
-import static java.awt.Color.RED;
-import static java.awt.Color.WHITE;
-import static java.awt.Color.YELLOW;
+import com.ldaniels528.woozle.*;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-import com.ldaniels528.woozle.GameDisplayPane;
-import com.ldaniels528.woozle.GameManager;
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.InGameMessage;
-import com.ldaniels528.woozle.SharedGameData;
+import static java.awt.Color.*;
 
 /**
  * HangMan Game Manager

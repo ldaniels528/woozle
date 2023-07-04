@@ -1,11 +1,10 @@
 package com.ldaniels528.woozle.hangman;
 
-import java.awt.Point;
-import java.awt.Rectangle;
-
 import com.ldaniels528.woozle.GameState;
 import com.ldaniels528.woozle.Logger;
 import com.ldaniels528.woozle.SharedGameData;
+
+import java.awt.*;
 
 /**
  * This class represents the virtual game board for HangMan

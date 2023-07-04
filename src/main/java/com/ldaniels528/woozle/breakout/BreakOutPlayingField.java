@@ -1,21 +1,18 @@
 package com.ldaniels528.woozle.breakout;
 
-import static com.ldaniels528.woozle.CustomColors.LIGHT_GREEN;
-import static com.ldaniels528.woozle.GameState.GAME_OVER;
-import static com.ldaniels528.woozle.GameState.OUT_OF_BOUNDS;
-import static java.awt.Color.GREEN;
-import static java.awt.Color.MAGENTA;
-import static java.awt.Color.ORANGE;
-import static java.awt.Color.YELLOW;
+import com.ldaniels528.woozle.GameState;
+import com.ldaniels528.woozle.SharedGameData;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.ldaniels528.woozle.GameState;
-import com.ldaniels528.woozle.SharedGameData;
+import static com.ldaniels528.woozle.CustomColors.LIGHT_GREEN;
+import static com.ldaniels528.woozle.GameState.GAME_OVER;
+import static com.ldaniels528.woozle.GameState.OUT_OF_BOUNDS;
+import static java.awt.Color.*;
 
 /**
  * This class represents the virtual playing field for Break-Out

@@ -1,9 +1,8 @@
 package com.ldaniels528.woozle;
 
-import static java.awt.Font.BOLD;
+import java.awt.*;
 
-import java.awt.Color;
-import java.awt.Font;
+import static java.awt.Font.BOLD;
 
 /**
  * WooZle Custom Color Definitions
