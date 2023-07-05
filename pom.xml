@@ -2,16 +2,26 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ldaniels528</groupId>
-	<artifactId>woozle</artifactId>
+	<artifactId>othello</artifactId>
 	<version>0.48</version>
-	<name>Woozle</name>
-	<description>A collection of mini-games (prototype for a possible Android application)</description>
+	<name>Othello</name>
+	<description>An Othello game written in Java</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>2.0.7</version>
 		</dependency>
 	</dependencies>
 
@@ -26,7 +36,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>com.ldaniels528.woozle.WooZle</mainClass>
+							<mainClass>com.ldaniels528.othello.Othello</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -49,6 +59,14 @@
 					<target />
 				</configuration>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 </project>
